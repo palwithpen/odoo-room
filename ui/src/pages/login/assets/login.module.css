@@ -1,0 +1,119 @@
+.mainContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pageContainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+}
+.imageContainer{
+    position: relative;
+    background-image: url('src/assets/meeting.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    opacity: 80%;
+}
+
+@keyframes dance {
+    from {
+        padding: 0px;
+        color: white;
+    }
+    to {
+        padding: 20px;
+    }
+    
+}
+.loginContainer{
+    display: grid;
+    padding: 20px;
+    grid-template-rows: 0.3fr 0.7fr;
+}
+
+.loginContainer > .heading {
+    text-align: center;
+    font-weight: lighter;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #353535;
+    padding: 20px;
+    animation: dance 0.8s;
+}
+
+.loginContainer > .creds {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align-last: center;
+}
+
+.loginContainer > .creds > div {
+    
+    margin-top: 7px;
+}
+
+.loginContainer > .creds > div > .extend {
+    width: 60%;
+}
+
+.loginButton{
+  width: 60%;
+}
+
+/* .loginButton {
+    min-width: 60%;
+    height: 45px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+      7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+    background: #57cc99;
+    z-index: 1;
+    text-decoration: none;
+    text-align: center;
+    line-height: 45px;
+  }
+  .loginButton:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  .loginButton:after {
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #6fcc85;
+    right: 0;
+  }
+  .loginButton:active {
+    top: 2px;
+  }
+   */
+  .invisible {
+    display: none;
+  }
+  

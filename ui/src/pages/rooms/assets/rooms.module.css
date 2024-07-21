@@ -1,0 +1,155 @@
+.mainContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: 80px auto;
+}
+
+.headerContainer {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 80px auto;
+}
+
+.headerContainer > .appName {
+  position: relative;
+  background-image: url('src/assets/images.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+}
+
+.headerContainer > .searchContainer {
+  place-self: center;
+}
+
+.bodyContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.bodyContainer > .roomContainer {
+  width: 60%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  gap: 15px;
+}
+
+.bodyContainer > .roomContainer > .card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.bodyContainer > .roomContainer > .card:hover {
+  border-color: #999;
+}
+
+.bodyContainer > .roomContainer > .card > .header {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bodyContainer > .roomContainer > .card > .details > div {
+  padding: 3px 0;
+  color: #555;
+}
+
+.selectedRoom {
+  border: 2px solid #4caf50;
+}
+
+.bodyContainer > .calendarContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bodyContainer > .calendarContainer > .datePicker {
+  background-color: #ffffff;
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bodyContainer > .calendarContainer > .timeSlotContainer {
+  background-color: #ffffff;
+  width: 70%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeSlot {
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.timeSlot:hover {
+  background-color: #d0d0d0;
+}
+
+.selectedSlot {
+  background-color: #fcfcfc;
+  border: 2px solid green;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.disabledSlot {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.bookButton {
+  margin-top: 20px;
+  width: 50%;
+  align-self: center;
+  background-color: #4caf50;
+  color: white;
+}
+
+.bookButton:hover {
+  background-color: #45a049;
+}
