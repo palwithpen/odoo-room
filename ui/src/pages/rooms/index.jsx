@@ -6,7 +6,7 @@ import { call } from '../../utility/api';
 import { room_action } from '../../store/reducers/roomSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Calendar, defaultCalendarStrings } from '@fluentui/react';
-import { useNavigate } from 'react-router';
+import { json, useNavigate } from 'react-router';
 import {jwtDecode} from 'jwt-decode';
 
 export default function Rooms() {
@@ -92,7 +92,7 @@ export default function Rooms() {
     const handleBookSlot = async () => {
         if (selectedRoom && selectedSlot && selectedDate) {
             const formattedDate = formatDate(selectedDate);
-            let result = await call("POST", `http://localhost:3000/room/${selectedRoom.roomId}`, { "authorization": token }, { "book_slot": selectedSlot, "booking_date": formattedDate });
+            let result = await call("POST", `http://localhost:3000/room/${selectedRoom.roomId}`, { "authorization": token.token  }, { "book_slot": selectedSlot, "booking_date": formattedDate });
 
             if (result["statusDescription"] === "SLOT_ADDED") {
                 const updatedRoom = { ...selectedRoom };
